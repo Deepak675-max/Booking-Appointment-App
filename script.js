@@ -193,7 +193,6 @@ function editItem(e) {
         date.value = data[4];
         const time = document.querySelector('#time');
         time.value = data[5];
-        updateAppointmentData(data[0], data);
-        userList.removeChild(li);
+        deleteAppointmentData(data[0]);
     }
 }
