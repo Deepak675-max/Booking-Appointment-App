@@ -16,7 +16,7 @@ btn.addEventListener('mouseleave', (e) => {
 // Axois Instance
 
 const axoisInstance = axios.create({
-    baseURL: 'https://crudcrud.com/api/1ca5cb653e4e4a978b956a690bedad15'
+    baseURL: 'https://crudcrud.com/api/c8b99a7a58e64ee79647a04f2b8f7b67'
 })
 
 
@@ -36,7 +36,7 @@ function addAppointmentData(data) {
     axoisInstance.post('/appointment-data', data)
         .then(res => {
             console.log(res.data);
-            // getAppointmentData();
+            getAppointmentData();
 
         })
         .catch(err => {
@@ -76,7 +76,7 @@ function deleteAppointmentData(id) {
         })
 }
 
-getAppointmentData();
+window.addEventListener('DOMContentLoaded', getAppointmentData);
 
 
 // USER FORM SCRIPT
